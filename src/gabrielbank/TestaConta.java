@@ -6,44 +6,56 @@ import java.util.Scanner;
 public class TestaConta {
 	public static void main(String[] args) {
 
-		
-		System.out.println("Deseja abrir uma nova conta? digite s:");
+	
 		Scanner scan = new Scanner(System.in);
-		String conf = scan.next();
-		if(conf.equals("s")) {
-			System.out.println("Digite o código da agência que deseja: ");
-			int agencia = scan.nextInt();
+
+		
+		 
+			
+				
+				System.out.println("Digite o código da agência que deseja: ");
+				int agencia = scan.nextInt();
+
+				Conta c = new Conta(agencia);
+
+				System.out.println("Digite seu nome: ");
+				String nome = scan.next();
+				Pessoa p = new Pessoa();
+				c.setCliente(p);
+				c.getCliente().setNome(nome);
+				System.out.println("Digite seu cpf: ");
+				String cpf = scan.next();
+				c.getCliente().setCpf(cpf);
+				System.out.println("Digite sua data de nascimento: ");
+				String dt_nascimento = scan.next();
+				c.getCliente().setDt_nascimento(dt_nascimento);
+
+				System.out.println("Conferir dados \n");
+				System.out.println("Nome: " + c.getCliente().getNome() + "\n" + "CPF: " + c.getCliente().getCpf() + "\n"
+						+ "Data de nascimento: " + c.getCliente().getDt_nascimento());
+				System.out.println("Se estiverem corretos, digite 1, caso não, digite 0 para cadastrar novamente");
+				int conf2;
+				conf2 = scan.nextInt();
+
+				if (conf2 == 1) {
+					System.out.println("Cadastrado com sucesso");
+				}
+
+				else {
+					System.out.println("Cadastrar novamente");
+
+				}
+
+			
+
 			
 			
-			Conta c = new Conta (agencia);
-			
-			
-			System.out.println("Digite seu nome: ");
-			String nome = scan.next();
-			Pessoa p = new Pessoa(nome);
-			c.setCliente(p);
-			
-		}
-		
-		else {
-			System.out.println("Até logo");
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-		
 		
 
-	
+		 }
+		 
 	}
+		 
+		
 
-}
+

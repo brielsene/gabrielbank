@@ -5,8 +5,8 @@ public class Pessoa {
 	private String cpf;
 	private String dt_nascimento;
 	
-	public Pessoa(String nome) {
-		this.nome = nome;
+	public Pessoa() {
+		
 	}
 	
 	public String getNome() {
