@@ -1,8 +1,8 @@
 package gabrielbank;
 
-public class Conta {
+public abstract class Conta {
 	 private int login;
-	 private String senha;
+	 private int senha;
 	 private int agencia;
 	 private Pessoa cliente;
 	 static int total = 0;
@@ -15,6 +15,10 @@ public class Conta {
 		total= total+1;
 		 
 	 }
+	 
+	 public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 	 
 	 public int getAgencia() {
 		return agencia;
@@ -32,11 +36,11 @@ public class Conta {
 		this.login = login;
 	}
 	 
-	 public String getSenha() {
+	 public int getSenha() {
 		return senha;
 	}
 	 
-	 public void setSenha(String senha) {
+	 public void setSenha(int senha) {
 		this.senha = senha;
 	}
 	 
@@ -66,6 +70,10 @@ public class Conta {
 		 
 		 return this.saldo = this.saldo + saldo;
 		 
+	 }
+	 
+	 public double getSaldo() {
+		 return this.saldo;
 	 }
 	
 

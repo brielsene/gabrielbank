@@ -13,10 +13,10 @@ public class TestaConta {
 		 
 			
 				
-				System.out.println("Digite o código da agência que deseja: ");
+				System.out.println("Digite o cÃ³digo da agÃªncia que deseja: ");
 				int agencia = scan.nextInt();
 
-				Conta c = new Conta(agencia);
+				Conta c = new ContaCorrente(agencia);
 
 				System.out.println("Digite seu nome: ");
 				String nome = scan.next();
@@ -29,11 +29,13 @@ public class TestaConta {
 				System.out.println("Digite sua data de nascimento: ");
 				String dt_nascimento = scan.next();
 				c.getCliente().setDt_nascimento(dt_nascimento);
-
+				System.out.println("Digite sua senha com nÃºmeros: ");
+				c.setSenha(311);
+ 
 				System.out.println("Conferir dados \n");
 				System.out.println("Nome: " + c.getCliente().getNome() + "\n" + "CPF: " + c.getCliente().getCpf() + "\n"
 						+ "Data de nascimento: " + c.getCliente().getDt_nascimento());
-				System.out.println("Se estiverem corretos, digite 1, caso não, digite 0 para cadastrar novamente");
+				System.out.println("Se estiverem corretos, digite 1, caso nï¿½o, digite 0 para cadastrar novamente");
 				int conf2;
 				conf2 = scan.nextInt();
 
