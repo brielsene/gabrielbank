@@ -34,5 +34,11 @@ public class Pessoa {
 		this.dt_nascimento = dt_nascimento;
 	}
 	
+	@Override
+	public String toString() {
+		
+		return "Pessoa: "+this.getNome();
+	}
+	
 	
 }
