@@ -108,6 +108,27 @@ public abstract class Conta {
 		 return this.saldo;
 	 }
 	 
+	 
+	 @Override
+	 public boolean equals(Object obj) {
+		 
+		 Conta outra = (Conta)obj;
+		 if(this.agencia != outra.agencia) {
+			return false;
+			 
+		 }
+		 
+		 if(this.numeroConta != outra.numeroConta) {
+			 return false;
+		 }
+		 
+		 return true;
+		 
+	 }
+	 
+	 
+
+	 
 	
 	 /**
 	  * Rescrita do metódo toString, padrão da classe Object do Java
@@ -117,6 +138,8 @@ public abstract class Conta {
 		return "Número:"+this.numeroConta +" Agência "+this.agencia;
 		 
 	 }
+	 
+	 
 	 
 	
 	

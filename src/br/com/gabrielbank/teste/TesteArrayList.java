@@ -6,7 +6,7 @@ import br.com.gabrielbank.modelo.*;
 
 import br.com.gabrielbank.modelo.GuardadorDeContas;
 
-public class Teste {
+public class TesteArrayList {
 
 	public static void main(String[] args) {
 //		GuardadorDeContas guardador = new GuardadorDeContas();
