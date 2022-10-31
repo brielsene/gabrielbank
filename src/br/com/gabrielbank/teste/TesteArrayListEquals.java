@@ -26,6 +26,14 @@ public class TesteArrayListEquals {
 		Conta cc2 = new ContaCorrente(12, 24);
 		//lista.add(cc2);
 		
+
+			//System.out.println(lista.get(2));
+		
+		Conta teste = new ContaCorrente(123, 124);
+		
+			System.out.println(lista);
+		
+		
 		
 		
 		

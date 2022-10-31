@@ -1,6 +1,8 @@
 package br.com.gabrielbank.teste;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import br.com.gabrielbank.modelo.*;
 
@@ -26,8 +28,11 @@ public class TesteArrayList {
 		// <>"Generics" Serve para delimitar que nesse ArrayList, servirá apenas para objetos do
 		// tipo conta
 
-		ArrayList<Conta> lista = new ArrayList<Conta>();
+		List<Conta> lista = new ArrayList<Conta>();
+		List<Conta> listaLinked = new LinkedList<Conta>();
 		ArrayList <Pessoa> listaPessoa = new ArrayList<Pessoa>();
+		
+		
 
 		Pessoa p = new Pessoa();
 		Pessoa p2 = new Pessoa();
@@ -56,6 +61,8 @@ public class TesteArrayList {
 
 		Conta cp = new ContaPoupanca(12, 55);
 		lista.add(cp);
+		
+		
 
 //		System.out.println(lista.get(0));
 //		System.out.println(lista.get(1));
