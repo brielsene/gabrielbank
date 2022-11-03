@@ -99,7 +99,7 @@ class NumeroDaContaComparator implements Comparator<Conta> {
 	@Override
 	public int compare(Conta c1, Conta c2) {
 //		r
-		return Integer.compare(c1.getNumeroConta(), c2.getNumeroConta());
+		return (c1.getNumeroConta()-c2.getNumeroConta());
 		
 //		if (c1.getNumeroConta() > c2.getNumeroConta()) {
 //			return 1;
