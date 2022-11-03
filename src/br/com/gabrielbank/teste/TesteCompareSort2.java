@@ -4,7 +4,7 @@ import java.util.*;
 
 import br.com.gabrielbank.modelo.*;
 
-public class Teste {
+public class TesteCompareSort2 {
 
 	public static void main(String[] args) {
 		Conta cc1 = new ContaCorrente(25, 33);
