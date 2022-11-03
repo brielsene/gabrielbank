@@ -1,6 +1,7 @@
 package br.com.gabrielbank.teste;
 
 import java.util.*;
+import java.util.function.Consumer;
 
 import br.com.gabrielbank.modelo.*;
 
@@ -43,23 +44,13 @@ public class Teste {
 		TitularDaContaComparator comparator2 = new TitularDaContaComparator();
 		
 		
-		lista.sort(new 
-				Comparator<Conta>() {//classe anonima
+		lista.sort((c1, c2) -> Integer.compare(c1.getNumeroConta(), c2.getNumeroConta())
+	
 
-			@Override
-			public int compare(Conta c1, Conta c2) {
-
-				return (c1.getNumeroConta()-c2.getNumeroConta());
-				
-
-			}
-
-		}
-				
-				
-				
-				
+	
 				);
+		
+		
 		
 		
 		
@@ -67,26 +58,46 @@ public class Teste {
 		//System.out.println("Ordenado por saldo");
 		
 		
+		//esse código é igual o de baixo
+		lista.forEach(( conta) -> 
+				System.out.println(conta)
+				
+			);
 		
-		for (Conta conta : lista) {
-			System.out.println(conta);
-			
-		}
+		
+		
+		
+//		for (Conta conta : lista) {
+//			System.out.println(conta);
+//			
+//		}
 		
 		System.out.println();
-		System.out.println("Ordenado pelo nome:");
-		Comparator <Conta> comp = new Comparator<Conta>() {
-
-			@Override
-			public int compare(Conta c1, Conta c2) {
+		//System.out.println("Ordenado pelo nome:");
+		
+		//Lambdas
+		Comparator <Conta> comp = (Conta c1, Conta c2) -> {
 
 				String nomeC1 = c1.getCliente().getNome();
 				String nomeC2 = c2.getCliente().getNome();
 				//método para comparar, object.compareTo();
 				return nomeC1.compareTo(nomeC2);
-			}
+			};
+			
+			System.out.println();
+			
+			lista.sort(comp);
+			
+			//lambda para foreach
+			
+			lista.forEach((conta) ->
+					System.out.println(conta)
+					
+					);
+			
+		
 
-		};
+		
 	
 	}
 
