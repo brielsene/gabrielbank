@@ -37,7 +37,7 @@ public class Pessoa {
 	@Override
 	public String toString() {
 		
-		return "Pessoa: "+this.getNome();
+		return this.getNome();
 	}
 	
 	

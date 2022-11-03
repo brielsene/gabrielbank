@@ -5,7 +5,7 @@ package br.com.gabrielbank.modelo;
  *
  */
 
-public abstract class Conta {
+public abstract class Conta extends Object implements Comparable<Conta>{
 	 private int login;
 	 private int senha;
 	 private int agencia, numeroConta;
@@ -133,9 +133,20 @@ public abstract class Conta {
 	 /**
 	  * Rescrita do metódo toString, padrão da classe Object do Java
 	  */
+	 
+	 
+	
+	 //ordem natural
+	 @Override
+	public int compareTo(Conta outra) {
+		// TODO Auto-generated method stub
+		return Double.compare(this.saldo, outra.saldo);
+	}
+	 
+	 
 	 @Override
 	 public String toString() {
-		return "Número:"+this.numeroConta +" Agência "+this.agencia;
+		return "Número:"+this.numeroConta +" Agência "+this.agencia+" Pessoa: "+this.cliente+" / Saldo: "+this.saldo;
 		 
 	 }
 	 
