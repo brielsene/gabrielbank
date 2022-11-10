@@ -1,11 +1,15 @@
 package br.com.gabrielbank.modelo;
+
+import java.io.Serializable;
+
 /**
  * Classe representa conta, que inicializa com digitação de um atributo agência
  * @author Gabriel
  *
  */
 
-public abstract class Conta extends Object implements Comparable<Conta>{
+public abstract class Conta extends Object implements Comparable<Conta>, Serializable
+{
 	 private int login;
 	 private int senha;
 	 private int agencia, numeroConta;

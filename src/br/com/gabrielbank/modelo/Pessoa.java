@@ -1,7 +1,8 @@
 package br.com.gabrielbank.modelo;
 
+import java.io.Serializable;
 
-public class Pessoa {
+public class Pessoa implements Serializable {
 	private String nome;
 	private String cpf;
 	private String dt_nascimento;
